@@ -8,8 +8,27 @@ namespace Function_MAX
         {
             Console.WriteLine(Max(4, 8, 6));
             Console.WriteLine(InRange(2, 5, 9));
-       //Comment
+            Console.WriteLine(IsPrimal(11));
+            //Comment
         }
+        static bool IsPrimal(int a)
+        {
+
+            int b;
+            b = a / 2;
+
+            for (int i = 2; i < b; i++)
+            {
+                if (a % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+
+        }
+
+
 
         static int Max(int a, int b, int c)
         {
@@ -29,12 +48,12 @@ namespace Function_MAX
             return m;
 
         }
-        static bool InRange (int a, int b, int c)
+        static bool InRange(int a, int b, int c)
         {
             bool d;
-            if ((a > b && a < c) || (a< b && a >c))
+            if ((a > b && a < c) || (a < b && a > c))
             {
-                d= true;
+                d = true;
             }
             else
             {

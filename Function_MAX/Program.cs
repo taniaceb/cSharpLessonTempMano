@@ -8,7 +8,7 @@ namespace Function_MAX
         {
             Console.WriteLine(Max(4, 8, 6));
             Console.WriteLine(InRange(2, 5, 9));
-
+       //Comment
         }
 
         static int Max(int a, int b, int c)

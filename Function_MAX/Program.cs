@@ -9,8 +9,17 @@ namespace Function_MAX
             Console.WriteLine(Max(4, 8, 6));
             Console.WriteLine(InRange(2, 5, 9));
             Console.WriteLine(IsPrimal(11));
+            Console.WriteLine(D20());
             //Comment
         }
+
+        static int D20()
+        {
+            Random rnd = new Random();
+            return rnd.Next(1, 20);
+        }
+
+
         static bool IsPrimal(int a)
         {
 

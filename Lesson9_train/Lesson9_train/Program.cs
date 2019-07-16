@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lesson9_train.Class_lesson9;
+using System;
 
 namespace Lesson9_train
 {
@@ -6,7 +7,10 @@ namespace Lesson9_train
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Preke Product = new Preke("Product1", 12.45, 5);
+            Product.AddNewProduct();
+            Product.ChangeProductPrice();
+
         }
     }
 }

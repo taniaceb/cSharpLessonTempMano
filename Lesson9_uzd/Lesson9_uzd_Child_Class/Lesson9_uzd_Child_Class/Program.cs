@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lesson9_uzd_Child_Class.Nature;
+using System;
 
 namespace Lesson9_uzd_Child_Class
 {
@@ -6,7 +7,15 @@ namespace Lesson9_uzd_Child_Class
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Bird myBird = new Bird("Bird_name",5,"Lithuania", 20, "White",true);
+            myBird.PrintBird();
+
+            Console.WriteLine();
+          
+            Animal animal = new Animal("Vilkas", 10, "Lithuania");
+            animal.PrintAnimal();
+            
+
         }
     }
 }

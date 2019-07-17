@@ -18,19 +18,11 @@ namespace Lesson9.Game
             _name = name;
         }
          
-        public void MoveDown(int id, int y)
+        public void MoveDown(int id)
         {
-            if ((_y + y) <=  20)
-            {
-                _y += y;
-            }
-            else
-            {
-                Console.WriteLine("Negalime judeti zemyn");
-            }
-
-
-
+           
+                _y ++;
+           
         }
 
         public void PrintInfo()

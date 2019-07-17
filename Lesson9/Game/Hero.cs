@@ -17,31 +17,25 @@ namespace Lesson9.Game
             _name = name;
         }
 
-        public void MoveRight(int x)
+        public void MoveRight()
         {
-            if ((_x + x) <=60)
-            {
-                _x += x;
-            }
-              else
-            {
-                Console.WriteLine("Negalime judeti i desine");
-            }
-
+           
+                _x ++;
+            
         }
 
-        public void MoveLeft(int x)
+        public void MoveLeft()
         {
-            if ((_x - x) >= 0)
-            {
-                _x -= x;
-            }
-            else
-            {
-                Console.WriteLine("Negalime judeti i kaire");
-            }
-
+           
+                _x --;
+           
         }
+
+        public int GetX()
+        {
+            return _x;
+        }
+
 
         public void PrintInfo()
         {

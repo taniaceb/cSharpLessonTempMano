@@ -21,7 +21,7 @@ namespace Lesson9
            // *********************************************************
            //1 UZD
             /*Hero hero = new Hero(5, 8, "Hero");
-            hero.MoveRight(18);
+            hero.MoveRight();
             hero.PrintInfo();
 
             List<Enemy> enemy = new List<Enemy>();
@@ -42,7 +42,7 @@ namespace Lesson9
 
             for (int i = 0; i < 10; i++)
             {
-                enemy[i].MoveDown(i,5);
+                enemy[i].MoveDown(i);
                 enemy[i].PrintInfo();
                 
 
@@ -51,7 +51,7 @@ namespace Lesson9
 
             //2 uzd ***********************************************
 
-
+            
 
 
         }

@@ -14,7 +14,7 @@ namespace Lesson9.Game
           
         }
          
-        public void MoveDown(int id)
+        public void MoveDown()
         {
            
                 Y ++;
@@ -25,7 +25,10 @@ namespace Lesson9.Game
         {
             Console.WriteLine("Enemy {0}  koordinates x = {1}  y = {2}", _id,_x, _y);
         }*/
-
+        public int GetId()
+        {
+            return _id;
+        }
 
     }
 }

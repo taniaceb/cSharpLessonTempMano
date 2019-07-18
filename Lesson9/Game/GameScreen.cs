@@ -9,16 +9,16 @@ namespace Lesson9.Game
         private int _width = 0;
         private int _height = 0;
         private Hero _hero;
-        private List<Enemy> _enemy = new List<Enemy>();
+        private List<Enemy> _enemies = new List<Enemy>();
 
-        public GameScreen (int width, int height)
+        public GameScreen(int width, int height)
         {
             _width = width;
             _height = height;
 
         }
 
-        public void SetHero (Hero hero)
+        public void SetHero(Hero hero)
         {
             _hero = hero;
         }
@@ -26,49 +26,59 @@ namespace Lesson9.Game
         public void MoveHeroRight()
         {
 
-            if (_hero.GetX() <= _width)
+           
+            if (_hero.GetX() < _width)
             {
                 _hero.MoveRight();
             }
-           else
-            {
-                Console.WriteLine("Negalime judeti i desine");
-            }
-           
-            
+
         }
 
         public void MoveHeroLeft()
         {
-            if (_hero.GetX() >= 0)
+            if (_hero.GetX() > 0)
             {
                 _hero.MoveLeft();
             }
-            else
-            {
-                Console.WriteLine("Negalime judeti i kaire");
-            }
-
-           
         }
 
         public void AddEnemy(Enemy enemy)
         {
-           _enemy.Add(enemy);
-
-           
-            }
-
+            _enemies.Add(enemy);
 
         }
 
-       /* public void MoveAllEnemiesDown(List<Enemy>)
+        public void MoveAllEnemiesDown()
         {
-        for (int i = 0; i < enemy_number; i++)
-        { Enemy.MoveDown(); }
-        }*/
+            foreach (Enemy enemy in _enemies)
+            {
+                enemy.MoveDown();
+            }
+        }
+        public Enemy GetEnemyById(int id)
+        {
+            foreach (Enemy enemy in _enemies)
+            {
+                if (enemy.GetId() == id)
+                {
+                    return enemy;
+                }
+            }
 
+            return null;
+        }
+
+        public void Render()
+        {
+            _hero.PrintInfo();
+            foreach (Enemy enemy in _enemies)
+            {
+                enemy.PrintInfo();
+            }
+        }
 
 
     }
+
+}
 

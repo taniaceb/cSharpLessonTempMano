@@ -9,59 +9,12 @@ namespace Lesson9
     {
         static void Main(string[] args)
         {
-            /*
-             AccountManager accountManager = new AccountManager(new Account(123555));
+                      
+        
+            GameController myGame = new GameController();
+            myGame.StartGame();
 
-             Account account = new Account(122322);
-             account.AddMoney(20.0);
-             account.SetMaxCredit(100);
-             account.TakeMoney(30.0);
-             account.PrintDetails();*/
-
-            // *********************************************************
-            //1 UZD
-            /*Hero hero = new Hero(5, 8, "Hero");
-            hero.MoveRight();
-            hero.PrintInfo();
-
-            List<Enemy> enemy = new List<Enemy>();
-
-            Random random = new Random();
-
-            for (int i =0; i<10; i++)
-            {
-                int random_x = random.Next(60);
-                int random_y = random.Next(20);
-
-                enemy.Add(new Enemy(i, random_x,random_y,("Enemy" +i)) );
-
-                enemy[i].PrintInfo();
-            }
-
-            Console.WriteLine("Naujos koordinates");
-
-            for (int i = 0; i < 10; i++)
-            {
-                enemy[i].MoveDown(i);
-                enemy[i].PrintInfo();
-                
-
-
-            }*/
-
-            //2 uzd ***********************************************
-
-            Hero hero = new Hero(10, 15, "Hero");
-            hero.MoveLeft();
-            hero.MoveRight();
-            hero.PrintInfo();
-
-            Console.WriteLine("Enemy");
-
-            Enemy enemy = new Enemy(0, 10, 14, "Enemy1");
-            enemy.MoveDown(0);
-            enemy.PrintInfo();
-
+                                   
         }
     }
 }

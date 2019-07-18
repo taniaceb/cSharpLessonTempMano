@@ -18,8 +18,8 @@ namespace Lesson9
              account.TakeMoney(30.0);
              account.PrintDetails();*/
 
-           // *********************************************************
-           //1 UZD
+            // *********************************************************
+            //1 UZD
             /*Hero hero = new Hero(5, 8, "Hero");
             hero.MoveRight();
             hero.PrintInfo();
@@ -51,8 +51,16 @@ namespace Lesson9
 
             //2 uzd ***********************************************
 
-            
+            Hero hero = new Hero(10, 15, "Hero");
+            hero.MoveLeft();
+            hero.MoveRight();
+            hero.PrintInfo();
 
+            Console.WriteLine("Enemy");
+
+            Enemy enemy = new Enemy(0, 10, 14, "Enemy1");
+            enemy.MoveDown(0);
+            enemy.PrintInfo();
 
         }
     }

@@ -62,13 +62,13 @@ namespace Lesson9.Game
 
         }
 
-        public void MoveAllEnemiesDown(List<Enemy>)
+       /* public void MoveAllEnemiesDown(List<Enemy>)
         {
-            for (int i=0; i<enemy_number; i++)
-            _enemy.MoveDown();
-        }
+        for (int i = 0; i < enemy_number; i++)
+        { Enemy.MoveDown(); }
+        }*/
 
 
 
     }
-}
+

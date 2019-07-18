@@ -4,43 +4,41 @@ using System.Text;
 
 namespace Lesson9.Game
 {
-    class Hero
+    class Hero:Unit
     {
-        private int _x = 0;
-        private int _y = 0;
-        private string _name;
-       
-        public Hero(int x, int y, string name)
+              
+        public Hero(int x, int y, string name) : base(x, y, name)
         {
-            _x = x;
-            _y = y;
-            _name = name;
+           // X = x;
+           // Y = y;
+           // Name = name;
         }
 
+       
         public void MoveRight()
         {
            
-                _x ++;
+                X++;
             
         }
 
         public void MoveLeft()
         {
            
-                _x --;
+                X --;
            
         }
 
         public int GetX()
         {
-            return _x;
+            return X;
         }
 
 
-        public void PrintInfo()
-        {
-            Console.WriteLine("Hero koordinates x = {0}  y = {1}", _x,_y);
-        }
+        //public void PrintInfo()
+        //{
+       //     Console.WriteLine("Hero koordinates x = {0}  y = {1}", X,Y);
+      //  }
 
 
 

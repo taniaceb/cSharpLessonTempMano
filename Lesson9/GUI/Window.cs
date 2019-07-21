@@ -6,10 +6,23 @@ namespace Lesson9.GUI
 {
     class Window:GuiObject
     {
-        protected Frame border;
-        public Window(int x, int y, int width, int height, Frame border) :base (x,y,width, height)
+        private Frame _border;
+
+        public Window(int x, int y, int width, int height, char borderChar) :base (x,y,width, height)
         {
-            this.border = border;
+
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
+
+            _border = new Frame(x,y,width,height,borderChar);
+        }
+
+        public void Render()
+        {
+            _border.Render();
+
         }
     }
 }

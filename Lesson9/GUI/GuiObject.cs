@@ -6,18 +6,26 @@ namespace Lesson9.GUI
 {
     class GuiObject
     {
-        protected int _height;
-        protected int _width;
-        protected int _x;
-        protected int _y;
+        protected int Height;
+        protected int Width;
+        protected int X;
+        protected int Y;
 
-        public GuiObject (int x, int y, int height, int width)
+        public GuiObject (int x, int y, int width, int height )
         {
-            _x = x;
-            _y = y;
-            _height = height;
-            _width = width;
+            X = x;
+            Y = y;
+            Height = height;
+            Width = width;
 
         }
+        public GuiObject(int x, int y, int width)
+        {
+            X = x;
+            Y = y;
+           Width = width;
+
+        }
+
     }
 }

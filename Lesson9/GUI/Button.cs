@@ -7,22 +7,26 @@ namespace Lesson9.GUI
     class Button: GuiObject
     {
         private Frame _activeFrame;
-        private bool _isActive = false;
+       // private bool _isActive = false;
         private Frame _notActiveFrame;
-        private TextLine _textLine;
+       // private TextLine _textLine;
+
+
+        public bool IsActive { get; set; } = false;
+        public TextLine Label { get; set; }
 
         public Button(int x, int y, int width, int height, string buttonText) : base (x, y, width, height)
         {
 
             _notActiveFrame = new Frame(x, y, width, height, '+');
             _activeFrame = new Frame(x, y, width, height, '#');
-            _textLine = new TextLine(x + 1, y + 1 + ((height - 2) / 2), width - 2, buttonText);
+            Label = new TextLine(x + 1, y + 1 + ((height - 2) / 2), width - 2, buttonText);
 
         }
 
         public void Render()
         {
-            if (_isActive)
+            if (IsActive)
             {
                 _activeFrame.Render();
             }
@@ -36,7 +40,7 @@ namespace Lesson9.GUI
 
         public void SetActive()
         {
-            _isActive = true;
+            IsActive = true;
         }
     }
 }

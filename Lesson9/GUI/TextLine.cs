@@ -6,13 +6,14 @@ namespace Lesson9.GUI
 {
     class TextLine :GuiObject
     {
-        //private string _data;
+        //private string _label;
 
-        public string Label { get; set; }
+        public string Label {get; set; }
+        
 
-        public TextLine(int x, int y, int width, string data) : base(x, y, width)
+        public TextLine(int x, int y, int width, string label) : base(x, y, width)
         {
-            Label = data;
+            Label = label;
         }
 
         public void Render()

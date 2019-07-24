@@ -6,11 +6,13 @@ namespace Lesson9.GUI
 {
     class Frame : GuiObject
     {
-        private char _renderChar;
+        //private char _renderChar;
+
+        public char RenderChar { get; set; }
 
         public Frame(int x, int y, int width, int height, char renderChar) : base(x, y, width, height)
         {
-            _renderChar = renderChar;
+           RenderChar = renderChar;
 
         }
 
@@ -24,18 +26,18 @@ namespace Lesson9.GUI
                 {
                     for (int j = 0; j < Width; j++)
                     {
-                        Console.Write(_renderChar);
+                        Console.Write(RenderChar);
                     }
                 }
                 else
                 {
-                    Console.Write(_renderChar);
+                    Console.Write(RenderChar);
                     for (int j = 0; j < Width - 2; j++)
                     {
                         Console.Write(' ');
                     }
 
-                    Console.Write(_renderChar);
+                    Console.Write(RenderChar);
                 }
             }
         }

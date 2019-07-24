@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lesson9.GUI
 {
-    class GuiObject
+    abstract class GuiObject
     {
         // private int _height;
         //private int _width;

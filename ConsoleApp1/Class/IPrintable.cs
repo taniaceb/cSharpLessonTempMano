@@ -6,5 +6,7 @@ namespace ConsoleApp1.Class
 {
     interface IPrintable
     {
+        void Print();
+       
     }
 }

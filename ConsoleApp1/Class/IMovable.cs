@@ -6,5 +6,6 @@ namespace ConsoleApp1.Class
 {
     interface IMovable
     {
+        void Move();
     }
 }

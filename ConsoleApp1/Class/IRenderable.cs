@@ -6,5 +6,6 @@ namespace ConsoleApp1.Class
 {
     interface IRenderable
     {
+        void Render();
     }
 }

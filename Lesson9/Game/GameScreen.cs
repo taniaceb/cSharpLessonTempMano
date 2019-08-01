@@ -6,8 +6,8 @@ namespace Lesson9.Game
 {
     class GameScreen
     {
-        private int _width = 0;
-        private int _height = 0;
+        private int _width;
+        private int _height;
         private Hero _hero;
         private List<Enemy> _enemies = new List<Enemy>();
 

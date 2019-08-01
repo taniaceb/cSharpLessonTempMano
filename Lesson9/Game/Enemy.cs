@@ -6,7 +6,7 @@ namespace Lesson9.Game
 {
     class Enemy:Unit
     {
-        private int _id = 0;
+        private int _id;
         
         public Enemy(int id, int x, int y, string name) :base(x,y,name)
         {

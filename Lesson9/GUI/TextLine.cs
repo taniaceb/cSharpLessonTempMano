@@ -6,17 +6,28 @@ namespace Lesson9.GUI
 {
     class TextLine :GuiObject
     {
-        //private string _label;
+        private string _label;
 
-        public string Label {get; set; }
-        
+        public string Label
+        {
+            get
+            {
+                return _label;
+            }
+            set
+            {
+                _label = value;
+                Render();
+            }
+        }
 
-        public TextLine(int x, int y, int width, string label) : base(x, y, width)
+
+        public TextLine(int x, int y, int width, string label) : base(x, y, width,0)
         {
             Label = label;
         }
 
-        public void Render()
+        public override void Render()
         {
             Console.SetCursorPosition(X, Y);
             if (Width > Label.Length)

@@ -6,9 +6,17 @@ namespace Lesson9.GUI
 {
     class Frame : GuiObject
     {
-        //private char _renderChar;
+        private char _renderChar;
 
-        public char RenderChar { get; set; }
+        public char RenderChar
+        {
+            get { return _renderChar; }
+            set
+            {
+                _renderChar = value;
+                Render();
+            }
+        }
 
         public Frame(int x, int y, int width, int height, char renderChar) : base(x, y, width, height)
         {
@@ -16,7 +24,7 @@ namespace Lesson9.GUI
 
         }
 
-        public void Render()
+        public override void Render()
         {
             for (int i = 0; i < Height; i++)
             {

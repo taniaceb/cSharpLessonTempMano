@@ -6,25 +6,33 @@ namespace Lesson9.GUI
 {
     class Button: GuiObject
     {
+        public bool IsActive { get; private set; } = false;
+
+        public string Label
+        {
+            get { return _textLine.Label; }
+            set { _textLine.Label = value; }
+        }
+        private string _label = "";
+
         private Frame _activeFrame;
-        private bool _isActive = false;
         private Frame _notActiveFrame;
-       // private TextLine _textLine;
+
+        private bool _isActive = false;
+        private TextLine _textLine;
 
 
-        public bool IsActive { get ; set; } = false;
-        public TextLine Label { get; set; }
-
+            
         public Button(int x, int y, int width, int height, string buttonText) : base (x, y, width, height)
         {
 
             _notActiveFrame = new Frame(x, y, width, height, '+');
             _activeFrame = new Frame(x, y, width, height, '#');
-            Label = new TextLine(x + 1, y + 1 + ((height - 2) / 2), width - 2, buttonText);
+            _textLine = new TextLine(x + 1, y + 1 + ((height - 2) / 2), width - 2, buttonText);
 
         }
 
-        public void Render()
+        public override void Render()
         {
             if (IsActive)
             {
@@ -35,12 +43,17 @@ namespace Lesson9.GUI
                 _notActiveFrame.Render();
             }
 
-            Label.Render();
+           _textLine.Render();
         }
 
         public void SetActive()
         {
             IsActive = true;
+        }
+
+        public void SetNotActive()
+        {
+            IsActive = false;
         }
     }
 }

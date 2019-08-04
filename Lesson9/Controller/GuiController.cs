@@ -39,6 +39,13 @@ namespace Lesson9.Controller
             {
                 switch (pressedChar.Key)
                 {
+                    case ConsoleKey.Escape:
+                        
+                      // Console.SetCursorPosition(0, 0);
+                     Console.Clear();
+                        ShowMenu();
+                        break;
+
                     case ConsoleKey.Enter:
 
                         if (creditW)

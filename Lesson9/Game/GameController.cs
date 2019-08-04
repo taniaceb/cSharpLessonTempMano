@@ -65,7 +65,7 @@ namespace Lesson9.Game
                 myGame.Render();
 
                 // padarom pause. (parodom ekrana).
-                System.Threading.Thread.Sleep(250);
+                System.Threading.Thread.Sleep(50);
             } while (needToRender);
         }
 

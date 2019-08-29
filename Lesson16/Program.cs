@@ -1,14 +1,162 @@
-﻿using System;
+﻿using Lesson16.Banks;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Lesson16
 {
+    public delegate void DoOperation(int m1, int m2);
+    public delegate void EvenHandler(string message);
+
+
+
     class Program
     {
+        static void MyMultiply(int m1, int m2)
+        {
+            Console.WriteLine(m1 * m2);
+        }
+
+        static void MySum(int m1, int m2)
+        {
+            Console.WriteLine(m1 + m2);
+        }
+
+
         static void Main(string[] args)
         {
 
-            File.WriteAllText(@"..\test2.txt", "Hello");
+        /*    Bank myBank = new Bank("BankName", 1000);
+            myBank.Add(500);*/
+
+
+
+
+           DoOperation myDelegate = new DoOperation(MyMultiply);
+            myDelegate(4, 5);
+            myDelegate += MySum;
+            myDelegate(7, 8);
+
+
+          
+            /*
+            LinkedList<String> linked = new LinkedList<String>();
+            linked.AddFirst("One");
+            linked.AddLast("Ten");
+
+            LinkedListNode<String> newNode = linked.First;
+            linked.AddAfter(newNode, "Two");
+
+            LinkedListNode<String> newNode1 = linked.Last;
+            linked.AddBefore(newNode1, "Nine");
+
+            foreach(string value in linked)
+            {
+                Console.WriteLine(value);
+            }
+
+            Console.WriteLine("***********************");
+
+            linked.Remove(newNode1);
+
+            foreach (string value in linked)
+            {
+                Console.WriteLine(value);
+            }
+
+            linked.RemoveFirst();
+
+            Console.WriteLine("***********************");
+
+            
+            foreach (string value in linked)
+            {
+                Console.WriteLine(value);
+            }
+
+            linked.RemoveLast();
+
+            Console.WriteLine("***********************");
+
+
+            foreach (string value in linked)
+            {
+                Console.WriteLine(value);
+            }
+
+            linked.Clear();
+            foreach (string value in linked)
+            {
+                Console.WriteLine(value);
+            }*/
+
+
+            /* Dictionary<int, string> week = new Dictionary<int, string>()
+            {
+                {1, "Monday" },
+                {2,"Tuesday" },
+                {3, "Wensday" },
+                {4,"Thursday" },
+                {5,"Friday" },
+                {6, "Sutarday" },
+                {7,"Sunday" }
+            };
+
+            Dictionary<int, string> arr = new Dictionary<int, string>();
+            arr.Add(0, "one");
+            arr.Add(5, "two");
+
+            Console.WriteLine(week[5]);
+            Console.WriteLine(week.Count);
+
+            week.Remove(6);
+            foreach (KeyValuePair<int,string> keyValuePair in week)
+            {
+                Console.WriteLine(keyValuePair.Key + " - " +keyValuePair.Value);
+            }
+
+            Console.WriteLine("******************************");
+
+            week.Add(6, "Sestadienis");
+            foreach(KeyValuePair<int,string> keyValuePair1 in week)
+            {
+                Console.WriteLine(keyValuePair1.Key + " - " + keyValuePair1.Value);
+            }
+
+
+           if (week.Contains(new KeyValuePair<int,string>(5,"Friday")))
+            {
+                Console.WriteLine("Yra");
+            }
+           else
+            {
+                Console.WriteLine("Nera");
+            }
+
+
+            if(week.ContainsKey(7))
+            {
+                Console.WriteLine("Toks raktas yra");
+            }
+
+
+            if(week.ContainsValue("Monday"))
+            {
+                Console.WriteLine("Tokia reiksme yra");
+            }
+
+            foreach(KeyValuePair<int,string> keyValuePair2 in arr)
+            {
+                Console.WriteLine(keyValuePair2.Key + " " + keyValuePair2.Value);
+            }
+
+            arr.Clear();*/
+
+
+
+
+            /* File.WriteAllText(@"..\test2.txt", "Hello");
             
             string failoTekstas = File.ReadAllText(@"..\test2.txt");
             Console.WriteLine(failoTekstas);
@@ -24,7 +172,7 @@ namespace Lesson16
             if (File.Exists(@"..\test1.txt"))
             {
                 File.Delete(@"..\test1.txt");
-            }
+            }*/
 
 
 
@@ -41,8 +189,8 @@ namespace Lesson16
             testEnemy1.PrintName();
             testEnemy2.DoStuff();*/
 
-            
-            
+
+
             /*
             string wordsLine;
 
@@ -71,5 +219,7 @@ namespace Lesson16
             Console.WriteLine($"String.Concat(testStr4,  testStr5):  {testStr6}");*/
 
         }
+
+       
     }
 }
